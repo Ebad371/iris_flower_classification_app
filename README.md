@@ -1,4 +1,4 @@
-# iris_flower_classification_app
+# Iris Flower Classification App
 This is a web app which includes iris flower classification model 
 
 1. Clone this repository
