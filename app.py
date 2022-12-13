@@ -19,10 +19,13 @@ st.bar_chart(data=df_chart.iloc[:,:4],use_container_width=True)
 x=df.iloc[:,:4]
 y=df.iloc[:,4]
 x_train,x_test,y_train,y_test=train_test_split(x,y,random_state=110)
-# model=LogisticRegression()
-# model.fit(x_train,y_train)
-file = open('model.pkl', 'rb')
-model = pickle.load(file)
+model=LogisticRegression()
+model.fit(x_train,y_train)
+
+file = open('model.pkl', 'wb')
+pickle.dump(file)
+# file = open('model.pkl', 'rb')
+# model = pickle.load(file)
 s_length = st.slider('Sepal Length', 0, 10, 2, step=1)
 s_width = st.slider('Sepal Width', 0, 10, 2, step=1)
 p_length = st.slider('Petal Length', 0, 10, 2, step=1)
