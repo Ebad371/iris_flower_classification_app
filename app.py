@@ -23,7 +23,7 @@ model=LogisticRegression()
 model.fit(x_train,y_train)
 
 file = open('model.pkl', 'wb')
-pickle.dump(file)
+pickle.dump(model,file)
 # file = open('model.pkl', 'rb')
 # model = pickle.load(file)
 s_length = st.slider('Sepal Length', 0, 10, 2, step=1)
